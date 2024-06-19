@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>Pacote Office (Word/Excel/Power Point)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="color2.css">
+</head>
+<style>
+
+
+#quizForm {
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    text-align: left; /* Alinha o formulário à esquerda */
+	margin-left: 25%;
+	font-family: Calibri;
+    margin-top: 0;
+    padding: 20px;
+}
+input[type="button"] {
+
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00459a;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            width: 50%;
+        }
+        input[type="button"]:hover {
+            width: 50%;
+            background-color: #0D63E3;
+        }
+@media only screen and (max-width: 600px) {
+    #quizForm {
+    white-space: normal;
+    width: 100%;
+    text-align: left; /* Alinha o formulário à esquerda */
+    margin-left: 2%;
+    font-family: Calibri;
+    padding: 10px;
+}
+    }
+</style>
+
+<body>
+  
+<div class="barra-menu">
+
+<ul>
+<a href="../index.html"><img src="../img/logotipo.jpg" alt="Logo"></a>
+  <li><a class="active" href="../index.html">Inicio</a></li>
+</ul>
+</div>
+<div class="ex1"></div>
+
+
+<br>
+<br>
+<div class="color2"><h1 style="font-family:calibri; color:#fff;">Quiz   <img src="imgs/quizicon.png" width="3%"></h1></div>
+<br>
+
+
+<form id="quizForm">
+            <h3>Pergunta 1: Qual linguagem é comumente usada para desenvolvimento de aplicativos móveis nativos?</h3>
+            <input type="radio" name="q1" value="a"> Python<br>
+            <input type="radio" name="q1" value="b"> Java<br>
+            <input type="radio" name="q1" value="c"> C#<br>
+
+            <h3>Pergunta 2: O que é um SDK?</h3>
+            <input type="radio" name="q2" value="a"> Software Development Knowledge<br>
+            <input type="radio" name="q2" value="b"> Software Development Kit<br>
+            <input type="radio" name="q2" value="c"> Software Developer Key<br>
+
+            <h3>Pergunta 3: Qual ferramenta é amplamente utilizada para o desenvolvimento de aplicativos multiplataforma?</h3>
+            <input type="radio" name="q3" value="a"> Android Studio<br>
+            <input type="radio" name="q3" value="b"> Flutter<br>
+            <input type="radio" name="q3" value="c"> Xcode<br>
+
+            <h3>Pergunta 4: O que significa API?</h3>
+            <input type="radio" name="q4" value="a"> Application Performance Index<br>
+            <input type="radio" name="q4" value="b"> Application Programming Interface<br>
+            <input type="radio" name="q4" value="c"> App Package Installation<br>
+
+            <h3>Pergunta 5: O que é o Git?</h3>
+            <input type="radio" name="q5" value="a"> Uma linguagem de programação<br>
+            <input type="radio" name="q5" value="b"> Um sistema de controle de versão<br>
+            <input type="radio" name="q5" value="c"> Uma plataforma de hospedagem de aplicativos<br>
+
+            <!-- Novas perguntas adicionadas -->
+            <h3>Pergunta 6: Qual é o formato de arquivo padrão para aplicativos Android?</h3>
+            <input type="radio" name="q6" value="a"> .apk<br>
+            <input type="radio" name="q6" value="b"> .ipa<br>
+            <input type="radio" name="q6" value="c"> .exe<br>
+
+            <h3>Pergunta 7: O que é o framework React Native?</h3>
+            <input type="radio" name="q7" value="a"> Um framework para desenvolvimento web<br>
+            <input type="radio" name="q7" value="b"> Um framework para desenvolvimento de aplicativos móveis multiplataforma<br>
+            <input type="radio" name="q7" value="c"> Um framework para desenvolvimento de jogos<br>
+
+            <h3>Pergunta 8: Qual é a linguagem de programação usada no desenvolvimento de aplicativos iOS?</h3>
+            <input type="radio" name="q8" value="a"> Java<br>
+            <input type="radio" name="q8" value="b"> Kotlin<br>
+            <input type="radio" name="q8" value="c"> Swift<br>
+
+            <h3>Pergunta 9: O que é um emulador de dispositivo móvel?</h3>
+            <input type="radio" name="q9" value="a"> Um aplicativo para otimizar a performance do dispositivo<br>
+            <input type="radio" name="q9" value="b"> Um dispositivo de hardware usado para testar aplicativos<br>
+            <input type="radio" name="q9" value="c"> Um programa que simula o comportamento de um dispositivo móvel<br>
+
+            <h3>Pergunta 10: O que é a depuração de aplicativos?</h3>
+            <input type="radio" name="q10" value="a"> O processo de corrigir bugs em um aplicativo<br>
+            <input type="radio" name="q10" value="b"> O processo de publicação de um aplicativo na loja de aplicativos<br>
+            <input type="radio" name="q10" value="c"> O processo de desenvolvimento inicial de um aplicativo<br>
+
+            <br>
+            <a href="da.html"><input type="button" value="< Voltar"></a>             <input type="button" value="Conferir Respostas" onclick="submitQuiz()">
+        </form>
+
+<script>
+        function submitQuiz() {
+            var q1 = document.querySelector('input[name="q1"]:checked');
+            var q2 = document.querySelector('input[name="q2"]:checked');
+            var q3 = document.querySelector('input[name="q3"]:checked');
+            var q4 = document.querySelector('input[name="q4"]:checked');
+            var q5 = document.querySelector('input[name="q5"]:checked');
+            var q6 = document.querySelector('input[name="q6"]:checked');
+            var q7 = document.querySelector('input[name="q7"]:checked');
+            var q8 = document.querySelector('input[name="q8"]:checked');
+            var q9 = document.querySelector('input[name="q9"]:checked');
+            var q10 = document.querySelector('input[name="q10"]:checked');
+
+            if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q10) {
+                alert("Por favor, responda todas as perguntas.");
+                return;
+            }
+
+            var score = 0;
+            if (q1.value === "b") score++;
+            if (q2.value === "b") score++;
+            if (q3.value === "b") score++;
+            if (q4.value === "b") score++;
+            if (q5.value === "b") score++;
+            if (q6.value === "a") score++;
+            if (q7.value === "b") score++;
+            if (q8.value === "c") score++;
+            if (q9.value === "c") score++;
+            if (q10.value === "a") score++;
+
+            showResults(score);
+        }
+
+        function showResults(score) {
+            var resultString = "Você acertou " + score + " de 10 perguntas.\n\n";
+            resultString += "Respostas corretas:\n";
+            resultString += "Pergunta 1: Java\n";
+            resultString += "Pergunta 2: Software Development Kit\n";
+            resultString += "Pergunta 3: Flutter\n";
+            resultString += "Pergunta 4: Application Programming Interface\n";
+            resultString += "Pergunta 5: Um sistema de controle de versão\n";
+            resultString += "Pergunta 6: .apk\n";
+            resultString += "Pergunta 7: Um framework para desenvolvimento de aplicativos móveis multiplataforma\n";
+            resultString += "Pergunta 8: Swift\n";
+            resultString += "Pergunta 9: Um programa que simula o comportamento de um dispositivo móvel\n";
+            resultString += "Pergunta 10: O processo de corrigir bugs em um aplicativo\n";
+
+            alert(resultString);
+        }
+    </script>
+
+<div class="ex2"></div>
+
+
+<br>
+<center><h4 style="font-family:arial;">2024 TECHVERS. Todos os direitos reservados.</h4></center>
+
+</body>
+</html>
+
+	

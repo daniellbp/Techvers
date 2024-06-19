@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>Dev Android em 6 mêses</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../color3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+iframe {
+        border: none; /* Remove a borda do iframe */
+		border-radius: 30px;
+		border: 5px solid #004d97;
+		width: 854px;
+		height: 480px;
+}
+
+iframe.comentarioiframe {
+        	width:854px;
+        	border: 2px solid #000;
+        	border-radius: 15px;"
+
+        }
+@media screen and (max-width: 600px) {
+        iframe {
+            width: 100%; /* Faz a iframe ocupar toda a largura do dispositivo */
+            height: 56.25vw; /* Mantém a proporção de 16:9 */
+            border: 3px solid #004d97;
+            border-radius: 15px;
+        }
+        iframe.comentarioiframe {
+        	width:80%;
+        	border: 1px solid #000;
+        	border-radius: 15px;"
+
+        }
+        
+    }
+</style>
+<body>
+   
+<div class="barra-menu">
+
+<ul>
+<a href="../../index.html"><img src="../../img/logotipo.jpg" alt="Logo"></a>
+  <li><a class="active" href="../../index.html">Inicio</a></li>
+</ul>
+</div>
+<div class="ex1"></div>
+
+
+<br>
+<br>
+
+
+
+
+<a href="../da.html"><input type="voltar" value="< VOLTAR"></a>
+
+
+<br>
+<br>
+	
+	<div>
+	<center><table class="table-video">
+    <tr>
+        <th colspan="4">
+<h1>Dev Android em 6 mêses</h1>
+</th>
+    </tr>
+    <tr>
+        <td colspan="4">
+                <iframe src="https://www.youtube.com/embed/VR4qSySgAqY?si=I0_EhMGIxnHL0RAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</td>
+    </tr>
+    <tr>
+    <td><span id="pessoasCurtiram">0 Pessoas Curtiram</span></td>
+    <td><img id="joia_sim" class="joia" src="../../img/joia_sim.jpg"></td>
+    <td><img id="joia_nao" class="joia" src="../../img/joia_nao.jpg"></td>
+    <td><span id="pessoasNaoCurtiram">0 Pessoas Não Curtiram</span></td>
+</tr>
+
+</table>
+               </center></div>
+            
+             
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<div class="chatbox" id="chatbox"></div>
+<form align="center" id="message-form">
+    <input type="text" id="name-input" placeholder="Seu nome">
+    <input type="text" id="message-input" placeholder="Digite sua mensagem..." disabled>
+    <input type="submit" value="Iniciar Chat">
+</form>
+
+<br>
+<br>
+
+
+
+<div class="ex2"></div>
+
+<br>
+
+<div>
+  <h4 class="textofinal"><i class="fa fa-copyright"></i> 2024 TECHVERS. Todos os direitos reservados.</h4>
+  </center>
+
+</div>
+<script>
+    // Função para aumentar o contador de curtidas
+    function curtir() {
+        if (!verificarVoto()) {
+            var contador = document.getElementById("pessoasCurtiram");
+            var valorAtual = parseInt(contador.textContent);
+            contador.textContent = (valorAtual + 1) + " Pessoas Curtiram";
+            definirCookie("votou", "true", 1); // Define o cookie com validade de 1 dia
+        }
+    }
+
+    // Função para aumentar o contador de não curtidas
+    function naoCurtir() {
+        if (!verificarVoto()) {
+            var contador = document.getElementById("pessoasNaoCurtiram");
+            var valorAtual = parseInt(contador.textContent);
+            contador.textContent = (valorAtual + 1) + " Pessoas Não Curtiram";
+            definirCookie("votou", "true", 1); // Define o cookie com validade de 1 dia
+        }
+    }
+
+    // Função para verificar se o usuário já votou (utilizando cookies)
+    function verificarVoto() {
+        var cookie = obterCookie("votou");
+        return cookie !== null;
+    }
+
+    // Função para definir um cookie
+    function definirCookie(nome, valor, diasParaExpirar) {
+        var data = new Date();
+        data.setTime(data.getTime() + (diasParaExpirar * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + data.toUTCString();
+        document.cookie = nome + "=" + valor + ";" + expires + ";path=/";
+    }
+
+    // Função para obter o valor de um cookie específico
+    function obterCookie(nome) {
+        var nomeEQ = nome + "=";
+        var cookies = document.cookie.split(';');
+        for(var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            while (cookie.charAt(0) === ' ') {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(nomeEQ) === 0) {
+                return cookie.substring(nomeEQ.length, cookie.length);
+            }
+        }
+        return null;
+    }
+
+    // Adicionando eventos de clique aos botões
+    document.getElementById("joia_sim").addEventListener("click", curtir);
+    document.getElementById("joia_nao").addEventListener("click", naoCurtir);
+</script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chatbox = document.getElementById('chatbox');
+    const form = document.getElementById('message-form');
+    const nameInput = document.getElementById('name-input');
+    const messageInput = document.getElementById('message-input');
+    let username = '';
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (username === '') {
+            setUsername();
+        } else {
+            sendMessage();
+        }
+    });
+
+    function setUsername() {
+        const name = nameInput.value.trim();
+        if (name !== '') {
+            username = name;
+            nameInput.disabled = true;
+            messageInput.disabled = false;
+            messageInput.focus();
+            form.querySelector('input[type="submit"]').value = 'Enviar Mensagem';
+        }
+    }
+
+    function sendMessage() {
+        const messageText = messageInput.value.trim();
+        if (messageText !== '') {
+            appendMessage(username, messageText);
+            messageInput.value = '';
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+    }
+
+    function appendMessage(sender, message) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message');
+        messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+        chatbox.appendChild(messageElement);
+    }
+});
+</script>
+
+
+    
+</body>
+</html>
+

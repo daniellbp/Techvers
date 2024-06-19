@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>Tecnologia da Informação</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="color2.css">
+</head>
+<style>
+</style>
+
+<body>
+  
+<div class="barra-menu">
+
+<ul>
+<a href="../index.html"><img src="../img/logotipo.jpg" alt="Logo"></a>
+  <li><a class="active" href="ti_quiz.html">Quiz</a></li>
+  <li><a class="active" href="../index.html">Inicio</a></li>
+</ul>
+</div>
+<div class="ex1"></div>
+
+
+<br>
+<br>
+<div class="color2"><h1 style="font-family:calibri;">Tecnologia da Informação         <img class="imgtitle" src="../img/ICON_ti.png" width="4%" style="vertical-align: middle;"></h1></div>
+
+
+<center><H2 class="desccurso">O curso de Tecnologia da Informação oferece uma exploração abrangente de temas como redes de computadores,<br> 
+segurança da informação e gestão de dados.</H2></center>
+<br>
+
+
+<div class="barra-pesquisa">
+    <input type="text" id="campo-pesquisa" placeholder="Pesquisar...">
+    <button type="button"><img src="../img/bot_pesquisar.png" width="25px"></button>
+</div>
+<br>
+<br>
+	
+	<div class="table-videos" id="videos-container">
+        <center><table>
+            <thead>
+                <tr>
+<th>					
+<div class="video-preview">
+<a href="videos_ti/comocomecar.html">
+  <img src="https://img.youtube.com/vi/T6bLOeSY-pw/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div>
+<br><h1>Como começar do zero em TI</h1></th>
+                    <th>					
+<div class="video-preview">
+<a href="videos_ti/top5.html">
+  <img src="https://img.youtube.com/vi/nipk9E4SJl8/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div>
+<br><h1>Top 5 áreas de TI</h1></th>
+                    <th>
+<div class="video-preview">
+<a href="videos_ti/5verdades.html">
+  <img src="https://img.youtube.com/vi/MfsztOOnyLg/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div><br><h1>5 Verdades sobre a Faculdade de TI</h1></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+				<th>
+<div class="video-preview">
+<a href="videos_ti/diferenca.html">
+  <img src="https://img.youtube.com/vi/nwhtk6g_kjo/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div><br><h1>Qual a diferença entre os cursos de TI?</h1></th>
+                    <th>
+<div class="video-preview">
+<a href="videos_ti/maiores.html">
+  <img src="https://img.youtube.com/vi/oz1vYItcWDg/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div>
+<br><h1>Maiores Salários de TI</h1></th>
+                    <th>
+<div class="video-preview">
+<a href="videos_ti/engenharia.html">
+  <img src="https://img.youtube.com/vi/ML1fgVfxuRU/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div>
+<br><h1>Engenharia de Software, Sistema da Informação</h1></th>
+                   
+                </tr>
+               
+            </tbody>
+        </table></center>
+    </div>
+<br>
+<br>
+<br>
+
+
+<div class="ex2"></div>
+
+<br>
+
+
+
+
+
+<br>
+<center><h4 style="font-family:arial;">2024 TECHVERS. Todos os direitos reservados.</h4></center>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+            const campoPesquisa = document.getElementById('campo-pesquisa');
+            const todosVideos = document.querySelectorAll('.table-videos th');
+
+            campoPesquisa.addEventListener('input', function() {
+                const termoPesquisa = campoPesquisa.value.trim().toLowerCase();
+
+                todosVideos.forEach(function(videoParent) {
+                    const titulo = videoParent.querySelector('h1').textContent.trim().toLowerCase();
+
+                    if (titulo.includes(termoPesquisa) || termoPesquisa === '') {
+                        videoParent.style.display = 'table-cell'; // Mostra o vídeo
+                    } else {
+                        videoParent.style.display = 'none'; // Esconde o vídeo
+                    }
+                });
+            });
+        });
+</script>
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Pacote Office (Word/Excel/Power Point)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="color2.css">
+</head>
+<style>
+
+
+#quizForm {
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    text-align: left; /* Alinha o formulário à esquerda */
+	margin-left: 25%;
+	font-family: Calibri;
+    margin-top: 0;
+    padding: 20px;
+}
+input[type="button"] {
+
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00459a;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            width: 50%;
+        }
+        input[type="button"]:hover {
+            width: 50%;
+            background-color: #0D63E3;
+        }
+@media only screen and (max-width: 600px) {
+    #quizForm {
+    white-space: normal;
+    width: 100%;
+    text-align: left; /* Alinha o formulário à esquerda */
+    margin-left: 2%;
+    font-family: Calibri;
+    padding: 10px;
+}
+    }
+</style>
+
+<body>
+  
+<div class="barra-menu">
+
+<ul>
+<a href="../index.html"><img src="../img/logotipo.jpg" alt="Logo"></a>
+  <li><a class="active" href="../index.html">Inicio</a></li>
+</ul>
+</div>
+<div class="ex1"></div>
+
+
+<br>
+<br>
+<div class="color2"><h1 style="font-family:calibri; color:#fff;">Quiz   <img src="imgs/quizicon.png" width="3%"></h1></div>
+<br>
+
+
+<form id="quizForm">
+              <h3>Pergunta 1: O que é Arduino?</h3>
+              <input type="radio" name="q1" value="a"> Uma linguagem de programação<br>
+              <input type="radio" name="q1" value="b"> Uma plataforma de prototipagem eletrônica<br>
+              <input type="radio" name="q1" value="c"> Um tipo de sensor de temperatura<br>
+  
+              <h3>Pergunta 2: Qual é o microcontrolador mais comum usado no Arduino?</h3>
+              <input type="radio" name="q2" value="a"> PIC<br>
+              <input type="radio" name="q2" value="b"> ESP8266<br>
+              <input type="radio" name="q2" value="c"> ATmega<br>
+  
+              <h3>Pergunta 3: O que é um shield no contexto do Arduino?</h3>
+              <input type="radio" name="q3" value="a"> Um tipo de proteção física para o Arduino<br>
+              <input type="radio" name="q3" value="b"> Um tipo de pino de entrada/saída digital<br>
+              <input type="radio" name="q3" value="c"> Uma placa de expansão que se conecta ao Arduino para adicionar funcionalidades<br>
+  
+              <h3>Pergunta 4: Qual é a linguagem de programação usada com o Arduino?</h3>
+              <input type="radio" name="q4" value="a"> Python<br>
+              <input type="radio" name="q4" value="b"> C/C++<br>
+              <input type="radio" name="q4" value="c"> Java<br>
+  
+              <h3>Pergunta 5: Qual é a principal vantagem do Arduino para projetos eletrônicos?</h3>
+              <input type="radio" name="q5" value="a"> Baixo custo e ampla disponibilidade de componentes<br>
+              <input type="radio" name="q5" value="b"> Alta potência de processamento<br>
+              <input type="radio" name="q5" value="c"> Facilidade de uso e programação<br>
+  
+              <!-- Novas perguntas adicionadas -->
+              <h3>Pergunta 6: Quais são os tipos de memória presentes no Arduino UNO?</h3>
+              <input type="radio" name="q6" value="a"> RAM e ROM<br>
+              <input type="radio" name="q6" value="b"> EEPROM e Flash<br>
+              <input type="radio" name="q6" value="c"> SRAM e DRAM<br>
+  
+              <h3>Pergunta 7: Qual é a função do bootloader em um Arduino?</h3>
+              <input type="radio" name="q7" value="a"> Controlar o brilho do LED embutido<br>
+              <input type="radio" name="q7" value="b"> Inicializar o programa carregado na memória flash ao ligar o Arduino<br>
+              <input type="radio" name="q7" value="c"> Regular a tensão de entrada para o microcontrolador<br>
+  
+              <h3>Pergunta 8: O que é PWM (Pulse Width Modulation) no contexto do Arduino?</h3>
+              <input type="radio" name="q8" value="a"> Uma técnica para gerar sinais de áudio<br>
+              <input type="radio" name="q8" value="b"> Um método para medir a temperatura ambiente<br>
+              <input type="radio" name="q8" value="c"> Uma técnica para controlar a intensidade luminosa de dispositivos como LEDs<br>
+  
+              <h3>Pergunta 9: O que é um sensor de ultrassom usado comumente em projetos Arduino?</h3>
+              <input type="radio" name="q9" value="a"> Um sensor para detectar a luminosidade ambiente<br>
+              <input type="radio" name="q9" value="b"> Um sensor para medir a distância de objetos<br>
+              <input type="radio" name="q9" value="c"> Um sensor para detectar temperatura corporal<br>
+  
+              <h3>Pergunta 10: O que é um servo motor?</h3>
+              <input type="radio" name="q10" value="a"> Um motor usado para girar eixos em alta velocidade<br>
+              <input type="radio" name="q10" value="b"> Um tipo de motor usado para mover mecanismos em ângulos precisos<br>
+              <input type="radio" name="q10" value="c"> Um motor que gera vibrações para alertas sonoros<br>
+  
+              <br>
+              <a href="arduino.html"><input type="button" value="< Voltar"></a>             <input type="button" value="Conferir Respostas" onclick="submitQuiz()">
+          </form>
+      
+  
+      <script>
+          function submitQuiz() {
+              var q1 = document.querySelector('input[name="q1"]:checked');
+              var q2 = document.querySelector('input[name="q2"]:checked');
+              var q3 = document.querySelector('input[name="q3"]:checked');
+              var q4 = document.querySelector('input[name="q4"]:checked');
+              var q5 = document.querySelector('input[name="q5"]:checked');
+              var q6 = document.querySelector('input[name="q6"]:checked');
+              var q7 = document.querySelector('input[name="q7"]:checked');
+              var q8 = document.querySelector('input[name="q8"]:checked');
+              var q9 = document.querySelector('input[name="q9"]:checked');
+              var q10 = document.querySelector('input[name="q10"]:checked');
+  
+              if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q10) {
+                  alert("Por favor, responda todas as perguntas.");
+                  return;
+              }
+  
+              var score = 0;
+              if (q1.value === "b") score++;
+              if (q2.value === "c") score++;
+              if (q3.value === "c") score++;
+              if (q4.value === "b") score++;
+              if (q5.value === "a") score++;
+              if (q6.value === "b") score++;
+              if (q7.value === "b") score++;
+              if (q8.value === "c") score++;
+              if (q9.value === "b") score++;
+              if (q10.value === "b") score++;
+  
+              showResults(score);
+          }
+  
+          function showResults(score) {
+              var resultString = "Você acertou " + score + " de 10 perguntas.\n\n";
+              resultString += "Respostas corretas:\n";
+              resultString += "Pergunta 1: Uma plataforma de prototipagem eletrônica\n";
+              resultString += "Pergunta 2: ATmega\n";
+              resultString += "Pergunta 3: Uma placa de expansão que se conecta ao Arduino para adicionar funcionalidades\n";
+              resultString += "Pergunta 4: C/C++\n";
+              resultString += "Pergunta 5: Baixo custo e ampla disponibilidade de componentes\n";
+              resultString += "Pergunta 6: EEPROM e Flash\n";
+              resultString += "Pergunta 7: Inicializar o programa carregado na memória flash ao ligar o Arduino\n";
+              resultString += "Pergunta 8: Uma técnica para controlar a intensidade luminosa de dispositivos como LEDs\n";
+              resultString += "Pergunta 9: Um sensor para medir a distância de objetos\n";
+              resultString += "Pergunta 10: Um tipo de motor usado para mover mecanismos em ângulos precisos\n";
+  
+              alert(resultString);
+          }
+      </script>
+
+<div class="ex2"></div>
+
+
+<br>
+<center><h4 style="font-family:arial;">2024 TECHVERS. Todos os direitos reservados.</h4></center>
+
+</body>
+</html>
+
+	

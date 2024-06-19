@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>Redes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="color2.css">
+</head>
+<style>
+</style>
+
+<body>
+  
+<div class="barra-menu">
+
+<ul>
+<a href="../index.html"><img src="../img/logotipo.jpg" alt="Logo"></a>
+  <li><a class="active" href="redes_quiz.html">Quiz</a></li>
+  <li><a class="active" href="../index.html">Inicio</a></li>
+</ul>
+</div>
+<div class="ex1"></div>
+
+
+<br>
+<br>
+<div class="color2"><h1 style="font-family:calibri;">Redes         <img class="imgtitle" src="../img/ICON_redes.png" width="4%" style="vertical-align: middle;"></h1></div>
+
+
+<center><H2 class="desccurso">O curso de Redes de Internet explora os fundamentos, configuração e manutenção de redes online,<br> 
+incluindo protocolos de internet e segurança cibernética.</H2></center>
+<br>
+
+
+<div class="barra-pesquisa">
+    <input type="text" id="campo-pesquisa" placeholder="Pesquisar...">
+    <button type="button"><img src="../img/bot_pesquisar.png" width="25px"></button>
+</div>
+<br>
+<br>
+	
+	<div class="table-videos" id="videos-container">
+        <center><table>
+            <thead>
+                <tr>
+<th>					
+<div class="video-preview">
+<a href="videos_redes/curso.html">
+  <img src="https://img.youtube.com/vi/QkMbqL8QD9w/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div>
+<br><h1>Curso de Redes</h1></th>
+                    <th>					
+<div class="video-preview">
+<a href="videos_redes/analisando.html">
+  <img src="https://img.youtube.com/vi/JAFhXan_Y9o/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div>
+<br><h1>Analisando seu ambiente WI-FI</h1></th>
+                    <th>
+<div class="video-preview">
+<a href="videos_redes/compras.html">
+  <img src="https://img.youtube.com/vi/tNxahMZsuyw/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div><br><h1>Compras</h1></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+				<th>
+<div class="video-preview">
+<a href="videos_redes/evolucao.html">
+  <img src="https://img.youtube.com/vi/x3bxVOGsdL4/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div><br><h1>Evolução das Redes</h1></th>
+                    <th>
+<div class="video-preview">
+<a href="videos_redes/classificacao.html">
+  <img src="https://img.youtube.com/vi/_826vVEokj8/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div>
+<br><h1>Classificação das Redes</h1></th>
+                    <th>
+<div class="video-preview">
+<a href="videos_redes/tipos.html">
+  <img src="https://img.youtube.com/vi/pwZ7ex9m_e8/maxresdefault.jpg" width="70%" height="auto">
+  <div class="video-overlay">
+  <div class="play-button"></div>
+  </div></a>
+</div>
+<br><h1>Tipos de Redes</h1></th>
+                   
+                </tr>
+               
+            </tbody>
+        </table></center>
+    </div>
+<br>
+<br>
+<br>
+
+
+<div class="ex2"></div>
+
+<br>
+
+
+
+
+<br>
+<center><h4 style="font-family:arial;">2024 TECHVERS. Todos os direitos reservados.</h4></center>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+            const campoPesquisa = document.getElementById('campo-pesquisa');
+            const todosVideos = document.querySelectorAll('.table-videos th');
+
+            campoPesquisa.addEventListener('input', function() {
+                const termoPesquisa = campoPesquisa.value.trim().toLowerCase();
+
+                todosVideos.forEach(function(videoParent) {
+                    const titulo = videoParent.querySelector('h1').textContent.trim().toLowerCase();
+
+                    if (titulo.includes(termoPesquisa) || termoPesquisa === '') {
+                        videoParent.style.display = 'table-cell'; // Mostra o vídeo
+                    } else {
+                        videoParent.style.display = 'none'; // Esconde o vídeo
+                    }
+                });
+            });
+        });
+</script>
+
+
+
+
+
+</body>
+</html>
+

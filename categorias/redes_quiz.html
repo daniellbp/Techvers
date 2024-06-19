@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>Pacote Office (Word/Excel/Power Point)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="color2.css">
+</head>
+<style>
+
+
+#quizForm {
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    text-align: left; /* Alinha o formulário à esquerda */
+	margin-left: 25%;
+	font-family: Calibri;
+    margin-top: 0;
+    padding: 20px;
+}
+input[type="button"] {
+
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00459a;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            width: 50%;
+        }
+        input[type="button"]:hover {
+            width: 50%;
+            background-color: #0D63E3;
+        }
+@media only screen and (max-width: 600px) {
+    #quizForm {
+    white-space: normal;
+    width: 100%;
+    text-align: left; /* Alinha o formulário à esquerda */
+    margin-left: 2%;
+    font-family: Calibri;
+    padding: 10px;
+}
+    }
+</style>
+
+<body>
+  
+<div class="barra-menu">
+
+<ul>
+<a href="../index.html"><img src="../img/logotipo.jpg" alt="Logo"></a>
+  <li><a class="active" href="../index.html">Inicio</a></li>
+</ul>
+</div>
+<div class="ex1"></div>
+
+
+<br>
+<br>
+<div class="color2"><h1 style="font-family:calibri; color:#fff;">Quiz   <img src="imgs/quizicon.png" width="3%"></h1></div>
+<br>
+
+
+<form id="quizForm">
+            <h3>Pergunta 1: O que é um protocolo de rede?</h3>
+            <input type="radio" name="q1" value="a"> Um tipo de cabo utilizado para conectar dispositivos<br>
+            <input type="radio" name="q1" value="b"> Um conjunto de regras que governa a comunicação entre dispositivos em uma rede<br>
+            <input type="radio" name="q1" value="c"> Um tipo de roteador<br>
+
+            <h3>Pergunta 2: Qual é a função do DNS (Sistema de Nomes de Domínio) na Internet?</h3>
+            <input type="radio" name="q2" value="a"> Gerenciar o tráfego de rede<br>
+            <input type="radio" name="q2" value="b"> Converter nomes de domínio em endereços IP<br>
+            <input type="radio" name="q2" value="c"> Fornecer segurança para redes sem fio<br>
+
+            <h3>Pergunta 3: O que é um endereço IP?</h3>
+            <input type="radio" name="q3" value="a"> Um número único atribuído a cada dispositivo conectado a uma rede<br>
+            <input type="radio" name="q3" value="b"> Um tipo de protocolo de segurança<br>
+            <input type="radio" name="q3" value="c"> Um tipo de software de rede<br>
+
+            <h3>Pergunta 4: O que é um roteador?</h3>
+            <input type="radio" name="q4" value="a"> Um dispositivo que fornece acesso à Internet<br>
+            <input type="radio" name="q4" value="b"> Um dispositivo que direciona o tráfego de rede entre diferentes dispositivos<br>
+            <input type="radio" name="q4" value="c"> Um tipo de firewall<br>
+
+            <h3>Pergunta 5: Qual é a diferença entre uma rede LAN e uma rede WAN?</h3>
+            <input type="radio" name="q5" value="a"> Uma rede LAN é sem fio, enquanto uma rede WAN é com fio<br>
+            <input type="radio" name="q5" value="b"> Uma rede LAN é local e limitada a uma área geográfica pequena, enquanto uma rede WAN abrange uma área geográfica maior e pode conectar várias LANs<br>
+            <input type="radio" name="q5" value="c"> Não há diferença, ambos os termos se referem ao mesmo tipo de rede<br>
+
+            <h3>Pergunta 6: O que significa TCP/IP?</h3>
+            <input type="radio" name="q6" value="a"> Transmissão de Controle de Pacotes/Internet Protocol<br>
+            <input type="radio" name="q6" value="b"> Transmissão de Conteúdo e Protocolo de Internet<br>
+            <input type="radio" name="q6" value="c"> Transmissão de Comunicação Privada/Protocolo de Interface<br>
+
+            <h3>Pergunta 7: O que é um ataque DDoS?</h3>
+            <input type="radio" name="q7" value="a"> Um tipo de ataque cibernético que desativa completamente uma rede<br>
+            <input type="radio" name="q7" value="b"> Um ataque que visa roubar informações pessoais dos usuários<br>
+            <input type="radio" name="q7" value="c"> Um ataque que sobrecarrega um servidor com um grande volume de tráfego de rede<br>
+
+            <h3>Pergunta 8: O que é NAT (Tradução de Endereço de Rede)?</h3>
+            <input type="radio" name="q8" value="a"> Uma técnica de criptografia usada para proteger dados transmitidos pela rede<br>
+            <input type="radio" name="q8" value="b"> Um tipo de protocolo de roteamento usado em redes sem fio<br>
+            <input type="radio" name="q8" value="c"> Um método que permite que dispositivos em uma rede privada usem um único endereço IP público para se comunicar com a Internet<br>
+
+            <h3>Pergunta 9: O que é um switch de rede?</h3>
+            <input type="radio" name="q9" value="a"> Um dispositivo que conecta dispositivos em uma rede sem fio<br>
+            <input type="radio" name="q9" value="b"> Um dispositivo que filtra e encaminha pacotes de dados para seus destinos na rede<br>
+            <input type="radio" name="q9" value="c"> Um tipo de firewall que protege contra ataques de negação de serviço<br>
+
+            <h3>Pergunta 10: O que é um cabo de fibra óptica?</h3>
+            <input type="radio" name="q10" value="a"> Um tipo de cabo usado para conectar dispositivos a uma rede sem fio<br>
+            <input type="radio" name="q10" value="b"> Um cabo que usa sinais elétricos para transmitir dados entre dispositivos em uma rede<br>
+            <input type="radio" name="q10" value="c"> Um cabo que usa pulsos de luz para transmitir dados em alta velocidade<br>
+
+            <br>
+            <a href="redes.html"><input type="button" value="< Voltar"></a>             <input type="button" value="Conferir Respostas" onclick="submitQuiz()">
+        </form>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            var q1 = document.querySelector('input[name="q1"]:checked');
+            var q2 = document.querySelector('input[name="q2"]:checked');
+            var q3 = document.querySelector('input[name="q3"]:checked');
+            var q4 = document.querySelector('input[name="q4"]:checked');
+            var q5 = document.querySelector('input[name="q5"]:checked');
+            var q6 = document.querySelector('input[name="q6"]:checked');
+            var q7 = document.querySelector('input[name="q7"]:checked');
+            var q8 = document.querySelector('input[name="q8"]:checked');
+            var q9 = document.querySelector('input[name="q9"]:checked');
+            var q10 = document.querySelector('input[name="q10"]:checked');
+
+            if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q10) {
+                alert("Por favor, responda todas as perguntas.");
+                return;
+            }
+
+            var score = 0;
+            if (q1.value === "b") score++;
+            if (q2.value === "b") score++;
+            if (q3.value === "a") score++;
+            if (q4.value === "b") score++;
+            if (q5.value === "b") score++;
+            if (q6.value === "a") score++;
+            if (q7.value === "c") score++;
+            if (q8.value === "c") score++;
+            if (q9.value === "b") score++;
+            if (q10.value === "c") score++;
+
+            showResults(score);
+        }
+
+        function showResults(score) {
+            var resultString = "Você acertou " + score + " de 10 perguntas.\n\n";
+            resultString += "Respostas corretas:\n";
+            resultString += "Pergunta 1: Um conjunto de regras que governa a comunicação entre dispositivos em uma rede\n";
+            resultString += "Pergunta 2: Converter nomes de domínio em endereços IP\n";
+            resultString += "Pergunta 3: Um número único atribuído a cada dispositivo conectado a uma rede\n";
+            resultString += "Pergunta 4: Um dispositivo que direciona o tráfego de rede entre diferentes dispositivos\n";
+            resultString += "Pergunta 5: Uma rede LAN é local e limitada a uma área geográfica pequena, enquanto uma rede WAN abrange uma área geográfica maior e pode conectar várias LANs\n";
+            resultString += "Pergunta 6: Transmissão de Controle de Pacotes/Internet Protocol\n";
+            resultString += "Pergunta 7: Um ataque que sobrecarrega um servidor com um grande volume de tráfego de rede\n";
+            resultString += "Pergunta 8: Um método que permite que dispositivos em uma rede privada usem um único endereço IP público para se comunicar com a Internet\n";
+            resultString += "Pergunta 9: Um dispositivo que filtra e encaminha pacotes de dados para seus destinos na rede\n";
+            resultString += "Pergunta 10: Um cabo que usa pulsos de luz para transmitir dados em alta velocidade\n";
+
+            alert(resultString);
+        }
+    </script>
+
+<div class="ex2"></div>
+
+
+<br>
+<center><h4 style="font-family:arial;">2024 TECHVERS. Todos os direitos reservados.</h4></center>
+
+</body>
+</html>
+
+	
