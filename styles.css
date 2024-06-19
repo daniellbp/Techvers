@@ -1,0 +1,51 @@
+/* Estilos gerais */
+.custom-carousel-container {
+
+  max-width: 80%; /* Ajuste conforme necessário */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative; /* Adicionado */
+}
+.custom-carousel {
+  display: flex;
+  position: relative; /* Adicionado */
+}
+.custom-carousel img {
+  width: 100%;
+  height: auto;
+}
+.prev-btn,
+.next-btn {
+  background-color: #ffffff; /* Cor de fundo dos botões */
+  border: 1px solid #cccccc; /* Borda dos botões */
+  color: #333333; /* Cor do texto dos botões */
+  padding: 8px 12px; /* Espaçamento interno dos botões */
+  font-size: 16px; /* Tamanho da fonte dos botões */
+  cursor: pointer; /* Mostrar cursor de apontar */
+  outline: none; /* Remover contorno ao clicar */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave */
+  position: absolute; /* Adicionado */
+  top: 50%; /* Adicionado */
+  transform: translateY(-50%); /* Adicionado */
+}
+.prev-btn {
+  left: 0; /* Posicionamento à esquerda */
+}
+.next-btn {
+  right: 0; /* Posicionamento à direita */
+}
+
+/* Estilos específicos para desktop */
+@media only screen and (min-width: 768px) {
+  .custom-carousel-mobile {
+    display: none;
+    max-width: 90%; /* Para dispositivos móveis */
+  }
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media only screen and (max-width: 767px) {
+  .custom-carousel-desktop {
+    display: none;
+  }
+}

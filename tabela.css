@@ -1,0 +1,126 @@
+
+.imgcat:hover,
+.imgcat2:hover {
+    transform: scale(1.1); /* Aumenta a escala da imagem em 10% ao passar o mouse sobre ela */
+}
+
+
+
+@media (max-width: 600px) {
+    .table-index table,
+    .table-index thead,
+    .table-index tr,
+    .table-index th {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+    }
+
+
+.table-mobile {
+   
+}
+
+.table-mobile table {
+    max-width: 100%;
+    
+    
+}
+
+
+
+.table-mobile th, .table-mobile td {
+    border: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.table-mobile th {
+    background-color: #fff;
+}
+
+.table-mobile th h1 {
+    font-size: 19px;
+}
+
+.table-mobile th h2 {
+    font-size: 17px;
+}
+
+.table-mobile th h3 {
+    font-size: 14px;
+}
+
+/* Redimensiona as imagens */
+    .imgcat2 {
+        width: 40%; /* Ajuste o tamanho máximo conforme necessário */
+        height: auto;
+    }
+}
+
+
+
+
+
+
+/* Estilo exclusivo para a classe .logo */
+.logo {
+    width: 10%; /* Ajusta a largura da imagem para ocupar 100% do espaço disponível */
+}
+
+/* Estilo exclusivo para a classe .barra-menu-mobile */
+.barra-menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+/* Estilo exclusivo para a classe .barra-menu-mobile img */
+.barra-menu-mobile img {
+    width: 150px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+/* Estilo exclusivo para a classe .menu-ul */
+.menu-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+/* Estilo exclusivo para a classe .menu-li */
+.menu-li {
+    float: right;
+    font-family: tahoma;
+    font-size: 14px;
+    z-index: 9999;
+    margin-right: 0 1px;
+}
+
+/* Estilo exclusivo para a classe .menu-li a */
+.menu-li a {
+    display: block;
+    color: #0083c6;
+    text-align: center;
+    padding: 14px 6px;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+/* Altera a cor do link para #111 (preto) ao passar o mouse */
+.menu-li a:hover {
+    background-color: #004e9a;
+    color: #ffffff;
+}

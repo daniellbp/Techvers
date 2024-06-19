@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>... :: TechVers :: ...</title>
+<script src="https://cdn.i18next.com/i18next/4.14.2/i18next.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles2.css">
+
+  
+</head>
+<style>
+@media only screen and (max-width: 600px) {
+    .barra-menu {
+        display: none;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .table-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .table-index {
+        display: none;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .barra-menu-mobile {
+        display: none;
+    }
+}
+
+</style>
+<body><nav class="navbar">
+        <div class="logo">
+            <img src="img/logotipo.jpg" alt="Logo">
+        </div>
+        <div class="hamburguer-menu" onclick="toggleMenu()">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+        </div>
+        <ul class="menu-items" id="menuItems">
+            <li><a class="active" href="index.html">Inicio</a></li>
+            <li><a href="#manual">Manual</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#contato">Contato</a></li>
+            
+            
+           
+        </ul>
+    </nav>
+
+
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    var menuItems = document.getElementById("menuItems");
+    var hamburguerMenu = document.querySelector(".hamburguer-menu");
+
+    hamburguerMenu.addEventListener("click", function() {
+        if (menuItems.style.display === "block") {
+            menuItems.style.display = "none";
+        } else {
+            menuItems.style.display = "block";
+        }
+    });
+
+    // Verificar o tamanho da tela e ocultar o menu se for maior que 768 pixels
+    function checkScreenWidth() {
+        if (window.innerWidth > 768) {
+            menuItems.style.display = "none";
+        }
+    }
+
+    // Executar a função ao carregar e redimensionar a página
+    window.addEventListener("load", checkScreenWidth);
+    window.addEventListener("resize", checkScreenWidth);
+});
+
+    </script>
+
+</body>
+</html>
+

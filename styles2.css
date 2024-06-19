@@ -1,0 +1,81 @@
+
+
+
+.menu-items {
+       display: none;
+}
+.logo img {
+  display: none;
+    
+}
+
+.menu-items li {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.menu-items li a {
+    color: #0083c6;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-items {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+    }
+    .menu-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #0083c6;
+    margin: 5px 0;
+    
+}
+.menu-items.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 30px solid #fff; /* Altere esta cor para a cor desejada */
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* Os elementos são distribuídos igualmente */
+    align-items: center;
+
+}
+
+.logo img {
+  display: block;
+    width:160px; /* ajuste o tamanho máximo do logo conforme necessário */
+}
+    .menu-items li {
+      font-family: tahoma;
+        border-bottom: 1px solid #666;
+        font-size: 16px;
+
+    }
+
+    .hamburguer-menu {
+        display: block;
+        justify-content: flex-end; /* Manteve para posicionar o ícone no lado direito */
+        color: #0083c6;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .hamburguer-menu {
+        display: none;
+    }
+}

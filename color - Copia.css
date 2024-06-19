@@ -1,0 +1,900 @@
+/* TOPO DA PÁGINA */
+
+
+
+body {margin:0;}
+
+
+.logo {
+    width: 10%; /* Ajusta a largura da imagem para ocupar 100% do espaço disponível */
+
+}
+
+
+.barra-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.barra-menu img {
+    width: 150px;
+    margin: 8px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    float: right;
+    font-family: tahoma;
+}
+
+li a {
+    display: block;
+    color: #0083c6;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #004e9a;
+    color: #ffffff;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .barra-menu {
+        display: none;
+    }
+
+}
+
+
+
+/* ================================= codigo menu hamburguinho ======================*/
+
+
+
+@media only screen and (max-width: 768px) {
+    .menu-list {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hamburger-icon {
+        width: 25px;
+        height: 3px;
+        background-color: #0083c6;
+        margin: 5px 0;
+    }
+
+    .navbar {
+        background-color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-logo img {
+        display: block;
+        width: 160px;
+    }
+
+    .menu-list-item {
+        font-family: tahoma;
+        border-bottom: 1px solid #666;
+        font-size: 16px;
+        display: block;
+    text-align: center;
+    padding: 15px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+        justify-content: flex-end;
+        color: #0083c6;
+    }
+    .menu-list-item a {
+    color: #0083c6;
+    text-decoration: none;
+}
+}
+
+@media only screen and (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================  Banner  Carrossel =============================== */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 1.5s ease;
+}
+
+.carousel-content img {
+  margin-top: 50px;
+  width: 100%;
+  flex: 0 0 auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.desktop-images {
+  display: flex; /* Alteração aqui para flex */
+}
+
+.mobile-images {
+  display: none;
+}
+
+/* Media query para dispositivos com largura máxima de 768 pixels (dispositivos móveis) */
+@media only screen and (max-width: 768px) {
+
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 1.5s ease;
+}
+
+.carousel-content img {
+  margin-top: 50px;
+  width: 100%;
+  flex: 0 0 auto;
+  height: auto;
+  object-fit: cover;
+}
+
+  .desktop-images {
+    display: none;
+  }
+
+  .mobile-images {
+    display: flex; /* Alteração aqui para flex */
+  }
+}
+
+
+
+
+
+/* ======================================================= */
+
+
+
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    height: auto;
+	max-width: 100%;
+    overflow: hidden;
+	
+	
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+	position: relative;
+	margin-top: 50px;
+	
+}
+
+/* Estilos para desktop */
+@media screen and (max-width: 768px) {
+    .banner .desktop {
+        display: none;
+		top: 50px;
+		
+    }
+}
+
+/* Estilos para celular */
+@media screen and (min-width: 769px) {
+    .banner .mobile	 {
+        display: none;
+		
+		
+    }
+}
+
+.banner-text {
+    position: absolute;
+    top: 40%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff; /* Cor do texto */
+	font-size: 45px; /* Tamanho da fonte */
+	font-family: Times New Roman;
+}
+
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .banner-text {
+        top: 25%;
+        left: 76%;
+        font-size: 20px; /* Tamanho da fonte para dispositivos móveis */
+        font-family: Times New Roman; /* Fonte para dispositivos móveis */
+        width: 37%; /* Defina a largura do texto como 80% */
+    }
+}
+
+
+/* CATEGORIAS */
+.categorias {
+    text-align: center;
+	font-family: Arial;
+	font-size: 30px;
+	        
+}
+
+@media screen and (max-width: 768px) {
+    .categorias {
+		
+	text-align: center;
+	font-family: Arial;
+	font-size: 18px;
+		
+    }
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------- */
+
+
+.table-index {
+    overflow-x: auto;
+}
+
+a {
+    color: inherit; /* herda a cor do texto do elemento pai */
+    text-decoration: none; /* remove o sublinhado */
+}
+
+table {
+    width: 70%; /* Alterado para 100% para ocupar a largura total */
+    border-collapse: collapse;
+    border-spacing: 5px;
+}
+
+th, td {
+    border: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+th {
+    background-color: #fff;
+}
+
+th h1 {
+    font-size: 24px; /* Ou qualquer outro valor que você achar adequado */
+}
+
+th h2 {
+    font-size: 20px; /* Ou qualquer outro valor que você achar adequado */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BARRA DE MANUAL DO USUARIO */
+
+  .barra {
+	background-color: #006eab; /* Cor de fundo da barra */
+    color: #fff; /* Cor do texto */
+    padding: 2; /* Espaçamento interno */
+	
+	
+  }
+  
+  .texto-esquerda {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-left: 20; /* Afasta o texto da borda esquerda */
+	font-family: calibri;
+  }
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  /* Estilos para a container do slider */
+.slider-container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilos para as imagens no slider */
+.slide {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para os botões de controle */
+.control-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    z-index: 1000;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+/* Esconde o slider móvel por padrão */
+.mobile-slider {
+    display: block;
+}
+
+/* Estilos de media query para exibir o slider móvel em dispositivos móveis */
+
+
+/* Estilos para o seletor de slider */
+.slider-selector {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.selector-btn {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	/* BARRA DE CONTATO */
+
+  .barradois {
+	background-color: #00aeb7; /* Cor de fundo da barra */
+    color: #fff; /* Cor do texto */
+    padding: 1px ; /* Espaçamento interno */
+	
+	
+  }
+
+
+  .barradoisimg {
+    background-color: #00aeb7; /* Cor de fundo da barra */
+    color: #fff; /* Cor do texto */
+    padding: 1px ; /* Espaçamento interno */
+    
+    
+  }
+  
+  .texto-esquerdadois {
+    text-align: right; /* Alinha o texto à esquerda */
+    margin-right: 20; /* Afasta o texto da borda esquerda */
+	font-family: calibri;
+  }
+  
+   
+  
+  
+  
+  /* BARRA DE quem somos */
+
+  .barratres {
+	background-color: #00aeb7; /* Cor de fundo da barra */
+    color: #fff; /* Cor do texto */
+    padding: 2; /* Espaçamento interno */
+		
+  }
+  
+  @media screen and (max-width: 769px) {
+    .barratres {
+		background-color: #00aeb7; /* Cor de fundo da barra */
+        display: block;
+		color: #fff; /* Cor do texto */
+		height: 50px;
+						
+    }
+	
+	.texto-esquerdatres {
+    margin-top: 8px;
+  }
+  .barra {
+	background-color: #006eab; /* Cor de fundo da barra */
+    color: #fff; /* Cor do texto */
+    padding: 2; /* Espaçamento interno */
+	height: 50px;
+	
+	  }
+  
+  .texto-esquerda {
+    margin-top: 8px
+  }
+  
+  .barradois {
+	background-color: #00aeb7; /* Cor de fundo da barra */
+    color: #fff; /* Cor do texto */
+    padding: 2; /* Espaçamento interno */
+	height: 50px;
+	
+  }
+  
+  .texto-esquerdadois {
+    margin-top: 8px; /* Afasta o texto da borda esquerda */
+	
+  }
+  
+
+.barradoisimg {
+    background-color: #00aeb7; /* Cor de fundo da barra */
+    color: #fff; /* Cor do texto */
+    padding: 1px ; /* Espaçamento interno */
+    height: 20px;
+    
+  }
+
+  
+}
+  
+  
+  
+  
+  .texto-esquerdatres {
+    text-align: right; /* Alinha o texto à esquerda */
+    margin-right: 20; /* Afasta o texto da borda esquerda */
+	font-family: calibri;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  	/* BARRA da pagina de categoria */
+  
+  div.ex1 {
+  
+  background-color: #004e9a;
+  padding-top: 50px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 80px;
+}
+  
+  
+  
+   	/* BARRA da pagina de categoria */
+  
+    div.color2 {
+  
+  background: linear-gradient(to right, #02aeb8, #ffffff, #ffffff);
+  padding-top: 1px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 70px;
+  font-family: Times new Roman;
+  font-size: 20px;
+}
+
+
+
+
+
+
+/* Estilos para a barra de pesquisa */
+        .barra-pesquisa {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 10px;
+			margin-left: auto;
+			margin-right: 50px;
+        }
+
+        .barra-pesquisa input[type="text"] {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        .barra-pesquisa button {
+            background-color: #ffffff;
+            color: #fff;
+            border: none;
+            border-radius: 0 20px 20px 0;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+		
+		
+		
+		
+		
+		
+
+
+
+/* Estilo para o container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinha itens ao topo */
+  background-color: #e5e6e8;
+}
+
+/* Estilo para o lado esquerdo */
+.left {
+  flex-basis: 50%; /* Define a largura para ocupar 50% da largura total do container */
+  background-color: #e5e6e8;
+}
+
+/* Estilo para dispositivos móveis */
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column; /* Muda a direção do flex container para empilhar itens verticalmente */
+    align-items: center; /* Alinha os itens centralmente */
+		
+  }
+
+  .left {
+    order: 2; /* Define a ordem do lado esquerdo para ser o segundo na empilhagem */
+	flex-basis: 100%; /* Define a largura para ocupar 50% da largura total do container */
+  }
+
+.imagemcontato {
+	width: 100%;
+}  
+
+  .right {
+    order: 1; /* Define a ordem do lado direito para ser o primeiro na empilhagem */
+  }
+}
+
+
+
+
+
+
+
+/* Estilo para a imagem */
+.imgcontato {
+  margin-left: 0px; /* Espaçamento à esquerda da imagem */
+  background-color: #e5e6e8;
+  
+}
+
+.imgcontato img {
+  width: 85%; /* Ajusta a largura da imagem para ocupar 100% do espaço disponível */
+  background-color: #e5e6e8;
+}
+
+@media screen and (max-width: 600px) {
+
+.imgcontato img {
+  width: 100%; /* Ajusta a largura da imagem para ocupar 100% do espaço disponível */
+  background-color: #e5e6e8;
+}
+
+
+}
+
+/* Estilo para o lado direito */
+.right {
+  flex-basis: 50%; /* Define a largura para ocupar 50% da largura total do container */
+}
+
+/* Estilo para o formulário */
+form {
+  max-width: 400px;
+  margin: 0 auto; /* Centraliza o formulário */
+  padding: 50px;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  
+}
+
+input[type="submit"] {
+  background-color: #004d97;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.option-container {
+  display: flex;
+  align-items: center;
+}
+
+.option-container label {
+  margin-left: 0px;
+}
+
+
+.quemsomos {
+	color: #5d5d5d;
+	font-family: Calibri;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	
+	.quemsomos {
+	color: #5d5d5d;
+	font-family: Calibri;
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+	font-size: 14px;
+}
+	
+}
+
+
+input[type="voltar"] {
+  background-color: #004d97;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  width: 5%;
+  margin: 10px;
+  border-radius: 8px;
+}
+		
+input[type="comentario"] {
+	border-radius: 5px;
+	width: 20%;
+	align-items: center;
+	
+}
+
+		.comentario {
+            display: flex;
+            align-items: center;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 10px;
+			
+        }
+
+        .comentario input[type="comentario"] {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        .comentario button {
+            background-color: #ffffff;
+            color: #fff;
+            border: none;
+            border-radius: 0 20px 20px 0;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+		
+		
+		
+.video-preview {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.play-button {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: center;
+  z-index: 1;
+}
+
+.play-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+  border-style: solid;
+  border-width: 10px 0 10px 20px;
+  border-color: transparent transparent transparent #000;
+}
+
+.video-preview:hover .video-overlay {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+.textofinal {
+    font-size: 16px;
+    font-family: arial;
+    text-align: center;
+}
+
+@media screen and (max-width: 769px) {
+.textofinal {
+    font-size: 12px;
+}
+
+
+.copyright {
+    display: flex;
+    align-items: center;
+}
+
+.copyright .fa {
+    margin-right: 10px; /* Ajuste conforme necessário */
+}
+
+

@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>... :: TechVers :: ...</title>
+<script src="https://cdn.i18next.com/i18next/4.14.2/i18next.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+
+  
+</head>
+<style>
+@media only screen and (max-width: 600px) {
+    .barra-menu {
+        display: none;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .table-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .table-index {
+        display: none;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .barra-menu-mobile {
+        display: none;
+    }
+}
+
+</style>
+<body>
+<div class="custom-carousel-container custom-carousel-desktop">
+  <div class="custom-carousel">
+    <button class="prev-btn" onclick="prevSlide('desktop')"><</button>
+    <img src="img/manual_desktop/0.jpg" alt="Imagem 1">
+    <img src="img/manual_desktop/1.jpg" alt="Imagem 2">
+    <img src="img/manual_desktop/2.jpg" alt="Imagem 3">
+    <img src="img/manual_desktop/3.jpg" alt="Imagem 4">
+    <img src="img/manual_desktop/4.jpg" alt="Imagem 5">
+    <img src="img/manual_desktop/5.jpg" alt="Imagem 6">
+    <button class="next-btn" onclick="nextSlide('desktop')">></button>
+  </div>
+</div>
+
+<!-- Carrossel para dispositivos móveis -->
+<div class="custom-carousel-container custom-carousel-mobile">
+  <div class="custom-carousel">
+    <button class="prev-btn" onclick="prevSlide('mobile')"><</button>
+    <img src="img/manual_mobile/0.jpg" alt="Imagem 1">
+    <img src="img/manual_mobile/1.jpg" alt="Imagem 2">
+    <img src="img/manual_mobile/2.jpg" alt="Imagem 3">
+    <img src="img/manual_mobile/3.jpg" alt="Imagem 4">
+    <img src="img/manual_mobile/4.jpg" alt="Imagem 5">
+    <img src="img/manual_mobile/5.jpg" alt="Imagem 6">
+    <button class="next-btn" onclick="nextSlide('mobile')">></button>
+  </div>
+</div>
+
+<script>
+ // Função para avançar o slide
+function nextSlide(device) {
+  const carousel = document.querySelector(`.custom-carousel-${device} .custom-carousel`);
+  const slideSize = carousel.firstElementChild.clientWidth;
+  carousel.style.transition = "transform 0.3s ease";
+  carousel.style.transform = `translateX(-${slideSize}px)`;
+  setTimeout(() => {
+    carousel.appendChild(carousel.firstElementChild);
+    carousel.style.transition = "none";
+    carousel.style.transform = "translateX(0)";
+  }, 300);
+}
+
+// Função para retroceder o slide
+function prevSlide(device) {
+  const carousel = document.querySelector(`.custom-carousel-${device} .custom-carousel`);
+  const slideSize = carousel.lastElementChild.clientWidth;
+  carousel.style.transition = "none";
+  carousel.style.transform = `translateX(-${slideSize}px)`;
+  setTimeout(() => {
+    carousel.insertBefore(carousel.lastElementChild, carousel.firstElementChild);
+    carousel.style.transition = "transform 0.3s ease";
+    carousel.style.transform = "translateX(0)";
+  }, 0);
+}
+
+</script>
+
+
+
+</body>
+</html>
+
